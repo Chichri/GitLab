@@ -23,6 +23,9 @@ It said "2. I should really finish writing this."
 
 4. What changed between commit e474c and 82045?
 
+in process_movie_data.py, x["Gross"] became int(x["Gross"]), and the indecies of rows changed from [:-5:-1] to
+[:6:-1]
+
 ## Predicting merges
 
 Assume at the start of each of these three questions that your
