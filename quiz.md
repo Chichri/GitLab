@@ -11,7 +11,11 @@ xanda_0000_movie_processing?
 (For this and future questions, the first 5 characters is plenty - neither
 Git nor I need the whole SHA.)
 
+9b257
+
 2. What is the SHA for the last commit associated with line 9 of this file?
+
+a351d
 
 3. What did line 12 of this file say in commit d1d83?
 
