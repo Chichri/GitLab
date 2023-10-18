@@ -46,6 +46,10 @@ What branches would change, and how?
 git checkout test
 git merge top_N
 ```
+Running the first command shouldn't do anything since I'm already on the test branch. The second command would
+merge the changes that have been committed and pushed on top_N to test.
+
+After the stash pop: I was right
 
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -53,6 +57,10 @@ What branches would change, and how?
 git checkout top_ten
 git merge test
 ```
+Running the first command would change the active branch to top_ten. The second would merge test with top_ten,
+effectively undoing the changes we made I believe.
+
+After the stash pop: I was wrong, I forgot about the ordering of the commits.
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -61,3 +69,12 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+Running the first command shouldn't do anything since I'm already on the test branch. The second command would
+rebase top_ten to test, which as far as I understand would actually change the parent commit as opposed to
+making a new commit that contains the effective sum of changes and then making the branch point to that like
+merge does. 
+
+I'm not totally sure what the third command would result in, now that the common ancestor commit has been
+changed. Maybe I'm miss understanding rebase, but I suspect it would error.
+
+After the stash pop: I was right.
